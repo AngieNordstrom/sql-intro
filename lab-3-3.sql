@@ -3,6 +3,13 @@
 
 -- Expected result: 61 rows, starting with
 --
+SELECT year, max(wins)
+FROM teams
+where year >=1960
+GROUP BY year
+order by max(wins) desc;
+
+
 -- +------+-------------------------------+-----------+
 -- | 2001 | Seattle Mariners              | 116       |
 -- | 1998 | New York Yankees              | 114       |
